@@ -43,7 +43,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(24, 26);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(178, 216);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -66,6 +66,7 @@
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(220, 29);
             this.textBoxLogin.TabIndex = 2;
+            this.textBoxLogin.Text = "Ivanov@namecomp.ru";
             // 
             // labelPassword
             // 
@@ -82,6 +83,7 @@
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(220, 29);
             this.textBoxPassword.TabIndex = 4;
+            this.textBoxPassword.Text = "2L6KZG";
             this.textBoxPassword.UseSystemPasswordChar = true;
             // 
             // buttonEnter
@@ -120,7 +122,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormAutorization";
             this.Text = "Форма авторизации";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

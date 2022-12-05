@@ -9,7 +9,11 @@ namespace Prialbrusie.Model
     [Table("User")]
     public partial class User
     {
-        public int id { get; set; }
+        [Key]
+        [StringLength(10)]
+        public string Kode { get; set; }
+
+        public int id_role { get; set; }
 
         [Required]
         [StringLength(50)]
@@ -22,8 +26,6 @@ namespace Prialbrusie.Model
         [StringLength(50)]
         public string Lastname { get; set; }
 
-        public int id_role { get; set; }
-
         [Required]
         [StringLength(50)]
         public string login { get; set; }
@@ -31,6 +33,10 @@ namespace Prialbrusie.Model
         [Required]
         [StringLength(50)]
         public string password { get; set; }
+
+        public DateTime? LastEnter { get; set; }
+
+        public int type { get; set; }
 
         public virtual Role Role { get; set; }
     }

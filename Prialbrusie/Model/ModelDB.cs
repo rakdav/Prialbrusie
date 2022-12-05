@@ -17,6 +17,7 @@ namespace Prialbrusie.Model
         public virtual DbSet<Service> Service { get; set; }
         public virtual DbSet<Status> Status { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Type> Type { get; set; }
         public virtual DbSet<User> User { get; set; }
         public virtual DbSet<UslugaZakaz> UslugaZakaz { get; set; }
         public virtual DbSet<Zakaz> Zakaz { get; set; }

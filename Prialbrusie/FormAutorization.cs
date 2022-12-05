@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -24,24 +25,22 @@ namespace Prialbrusie
             else textBoxPassword.UseSystemPasswordChar = true;  
         }
 
-        private void buttonEnter_Click(object sender, EventArgs e)
+        private async void buttonEnter_Click(object sender, EventArgs e)
         {
             using (ModelDB DB=new ModelDB())
             {
-                User user=DB.User.Where(p=>p.login.Equals(textBoxLogin.Text)&&p.password.Equals(textBoxPassword.Text)).FirstOrDefault();
+                User user= await DB.User.Where(p=>p.login.Equals(textBoxLogin.Text)&&p.password.Equals(textBoxPassword.Text)).FirstOrDefaultAsync();
                 if (user != null)
                 {
-                    if(user.id_role==1)
+                    FormControl formControl = new FormControl(user);
+                    this.Hide();
+                    formControl.ShowDialog();
+                    user.LastEnter= DateTime.Now;
+                    DB.Entry(user).State = EntityState.Modified;
+                    DB.SaveChanges();
+                    if(formControl.DialogResult==DialogResult.OK)
                     {
-
-                    }
-                    else if(user.id_role==2)
-                    {
-
-                    }
-                    else
-                    {
-
+                        this.Show();
                     }
                 }
                 else
