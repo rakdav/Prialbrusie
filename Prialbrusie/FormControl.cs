@@ -15,20 +15,25 @@ namespace Prialbrusie
     public partial class FormControl : Form
     {
         private int hours, minutes, seconds;
+
+        private void FormControl_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
+
         public FormControl(User user)
         {
             InitializeComponent();
             var myAssembly = Assembly.GetExecutingAssembly();
             pictureBoxUser.Image = Image.FromFile(user.Firstname + ".jpeg");
-            labelFirstName.Text = user.Firstname;
-            labelName.Text = user.Surname;
+            labelFirstName.Text ="Фамилия:"+user.Firstname;
+            labelName.Text ="Имя:"+user.Surname;
             using (ModelDB db = new ModelDB())
             {
-                labelRole.Text = db.Role.Where(p => p.Id == user.id_role).FirstOrDefault().name;
+                labelRole.Text ="Должность:"+db.Role.Where(p => p.Id == user.id_role).FirstOrDefault().name;
             }
             timer1.Interval = 1000;
             timer1.Enabled = true;
-            timer1.Tick += timer1_Tick;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -44,7 +49,17 @@ namespace Prialbrusie
                 hours++;
                 minutes = 0;
             }
-            labelTimer.Text = "Таймер:"+String.Format("{0:HH}:{1:mm}:{2:ss}",hours,minutes,seconds);
+            if(hours==0&minutes==5)
+            {
+                MessageBox.Show("Через 15 минут сеанс будет завершен.",
+                    "Сообщение", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+            if (hours == 0 & minutes == 10)
+            {
+                Application.Exit();
+            }
+            labelTimer.Text = "Таймер:"+String.Format("{0:d2}:{1:d2}:{2:d2}",hours,minutes,seconds);
         }
     }
 }

@@ -132,6 +132,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormControl";
             this.Text = "Панель управления";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormControl_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.ResumeLayout(false);
