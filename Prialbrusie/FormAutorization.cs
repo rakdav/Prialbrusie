@@ -14,6 +14,7 @@ namespace Prialbrusie
 {
     public partial class FormAutorization : Form
     {
+        private int hours, minutes, seconds;
         public FormAutorization()
         {
             InitializeComponent();
@@ -41,12 +42,33 @@ namespace Prialbrusie
                     if(formControl.DialogResult==DialogResult.OK)
                     {
                         this.Show();
+                        if(formControl.getStop())
+                        {
+                            buttonEnter.Enabled = false;
+                            timerStop.Enabled = true;
+                        }
                     }
                 }
                 else
                 {
                     MessageBox.Show("Пользователя или пароля не существует");
                 }
+            }
+        }
+
+        private void timerStop_Tick(object sender, EventArgs e)
+        {
+            seconds++;
+            seconds++;
+            if (seconds == 60)
+            {
+                minutes++;
+                seconds = 0;
+            }
+            if (minutes == 1)
+            {
+                buttonEnter.Enabled = true;
+                timerStop.Enabled = false;
             }
         }
     }

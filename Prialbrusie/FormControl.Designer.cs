@@ -38,6 +38,7 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.labelTimer = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
             this.SuspendLayout();
@@ -116,11 +117,22 @@
             this.labelTimer.TabIndex = 6;
             this.labelTimer.Text = "Таймер:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(108, 522);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 29);
+            this.label1.TabIndex = 7;
+            // 
             // FormControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 563);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTimer);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.labelRole);
@@ -150,5 +162,6 @@
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label labelTimer;
+        private System.Windows.Forms.Label label1;
     }
 }

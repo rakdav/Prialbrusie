@@ -15,6 +15,7 @@ namespace Prialbrusie
     public partial class FormControl : Form
     {
         private int hours, minutes, seconds;
+        private bool stop;
 
         private void FormControl_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -49,17 +50,20 @@ namespace Prialbrusie
                 hours++;
                 minutes = 0;
             }
-            if(hours==0&minutes==5)
+            if(hours==0&&minutes==1)
             {
-                MessageBox.Show("Через 15 минут сеанс будет завершен.",
-                    "Сообщение", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                label1.Text="Через 15 минут сеанс будет завершен.";
             }
-            if (hours == 0 & minutes == 10)
+            if (hours == 0 && minutes == 2)
             {
-                Application.Exit();
+                stop = true;
+                this.Close();
             }
             labelTimer.Text = "Таймер:"+String.Format("{0:d2}:{1:d2}:{2:d2}",hours,minutes,seconds);
+        }
+        public bool getStop()
+        {
+            return stop;
         }
     }
 }

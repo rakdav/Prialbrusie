@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAACRcAAAXsCAYAAAC2CixYAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAA6NJJREFUeF7s3QeULXWZ9m36BMIhJwkSFAliFseAYBxzVhSzYh7jmOUdA2Zfc8CA
+        EAAACxABrSO9dQAA6NJJREFUeF7s3QeULXWZ9m36BMIhJwkSFAliFseAYBxzVhSzYh7jmOUdA2Zfc8CA
         OWcZxYyCERUVVNAxDEZgAElKhsPhfN/9f9UR8eGcDrV776p9XWv91prlQIfd3dXFU09XrQMAAMDYrZe2
         TrumG6XbpNunO6Q7/rU7/bXbpZula6ed0uZpWQIAAAAAAAAAAHpkaWoLQ20h6ID0vHRI+nz6STotXZz+
         vw66MP0uHZU+nl6bnp7un26aNkkAAAAAAAAAAMAia3cOum56QHpR+kQ6PnW1ONRVJ6Yvp9elR6e90wYJ
@@ -1117,6 +1117,9 @@
         AAAAAAAAmBBt09Fa6Y5piz//57oJAAAAAAAAAADo3O1u9/8AKjB/G7gtEZoAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="timerStop.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAKcAAAEAIAAIsQIAFgAAACgAAAAAAQAATgEAAAEAIAAAAAAAAJwCABMLAAATCwAAAAAAAAAA

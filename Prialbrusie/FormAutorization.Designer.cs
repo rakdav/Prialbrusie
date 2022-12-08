@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAutorization));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelLogin = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.buttonEnter = new System.Windows.Forms.Button();
             this.checkBoxShow = new System.Windows.Forms.CheckBox();
+            this.timerStop = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,6 +110,11 @@
             this.checkBoxShow.UseVisualStyleBackColor = true;
             this.checkBoxShow.CheckedChanged += new System.EventHandler(this.checkBoxShow_CheckedChanged);
             // 
+            // timerStop
+            // 
+            this.timerStop.Interval = 1000;
+            this.timerStop.Tick += new System.EventHandler(this.timerStop_Tick);
+            // 
             // FormAutorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -140,6 +147,7 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Button buttonEnter;
         private System.Windows.Forms.CheckBox checkBoxShow;
+        private System.Windows.Forms.Timer timerStop;
     }
 }
 
