@@ -61,7 +61,7 @@
             // 
             this.listViewZakaz.HideSelection = false;
             this.listViewZakaz.Location = new System.Drawing.Point(15, 6);
-            this.listViewZakaz.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.listViewZakaz.Margin = new System.Windows.Forms.Padding(6);
             this.listViewZakaz.Name = "listViewZakaz";
             this.listViewZakaz.Size = new System.Drawing.Size(531, 431);
             this.listViewZakaz.TabIndex = 0;
@@ -71,7 +71,7 @@
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.Lime;
             this.buttonAdd.Location = new System.Drawing.Point(15, 449);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(6);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(138, 42);
             this.buttonAdd.TabIndex = 1;
@@ -247,7 +247,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(560, 449);
+            this.pictureBox1.Location = new System.Drawing.Point(560, 443);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(214, 159);
             this.pictureBox1.TabIndex = 21;
@@ -291,7 +291,7 @@
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listViewZakaz);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormZakaz";
             this.Text = "Заказы";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHourStart)).EndInit();
