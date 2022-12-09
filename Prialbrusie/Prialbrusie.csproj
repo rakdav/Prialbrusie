@@ -67,6 +67,18 @@
     <Compile Include="FormControl.Designer.cs">
       <DependentUpon>FormControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHistory.Designer.cs">
+      <DependentUpon>FormHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormZakaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormZakaz.Designer.cs">
+      <DependentUpon>FormZakaz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\ModelDB.cs" />
     <Compile Include="Model\Role.cs" />
@@ -84,6 +96,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormControl.resx">
       <DependentUpon>FormControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHistory.resx">
+      <DependentUpon>FormHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormZakaz.resx">
+      <DependentUpon>FormZakaz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

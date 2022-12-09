@@ -35,6 +35,14 @@ namespace Prialbrusie
             }
             timer1.Interval = 1000;
             timer1.Enabled = true;
+            if (user.id_role == 3) buttonHistory.Visible = true;
+            if(user.id_role==1||user.id_role==2) buttonZakaz.Visible = true;
+        }
+
+        private void buttonHistory_Click(object sender, EventArgs e)
+        {
+            FormHistory formHistory= new FormHistory();
+            formHistory.ShowDialog();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

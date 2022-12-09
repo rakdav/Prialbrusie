@@ -39,6 +39,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.labelTimer = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.buttonHistory = new System.Windows.Forms.Button();
+            this.buttonZakaz = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).BeginInit();
             this.SuspendLayout();
@@ -127,11 +129,36 @@
             this.label1.Size = new System.Drawing.Size(0, 29);
             this.label1.TabIndex = 7;
             // 
+            // buttonHistory
+            // 
+            this.buttonHistory.BackColor = System.Drawing.Color.Lime;
+            this.buttonHistory.Location = new System.Drawing.Point(24, 251);
+            this.buttonHistory.Name = "buttonHistory";
+            this.buttonHistory.Size = new System.Drawing.Size(181, 58);
+            this.buttonHistory.TabIndex = 8;
+            this.buttonHistory.Text = "История входа";
+            this.buttonHistory.UseVisualStyleBackColor = false;
+            this.buttonHistory.Visible = false;
+            this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);
+            // 
+            // buttonZakaz
+            // 
+            this.buttonZakaz.BackColor = System.Drawing.Color.Lime;
+            this.buttonZakaz.Location = new System.Drawing.Point(24, 325);
+            this.buttonZakaz.Name = "buttonZakaz";
+            this.buttonZakaz.Size = new System.Drawing.Size(181, 55);
+            this.buttonZakaz.TabIndex = 9;
+            this.buttonZakaz.Text = "Заказ";
+            this.buttonZakaz.UseVisualStyleBackColor = false;
+            this.buttonZakaz.Visible = false;
+            // 
             // FormControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(826, 563);
+            this.Controls.Add(this.buttonZakaz);
+            this.Controls.Add(this.buttonHistory);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.labelTimer);
             this.Controls.Add(this.buttonBack);
@@ -141,6 +168,7 @@
             this.Controls.Add(this.pictureBoxUser);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormControl";
             this.Text = "Панель управления";
@@ -163,5 +191,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label labelTimer;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonHistory;
+        private System.Windows.Forms.Button buttonZakaz;
     }
 }
