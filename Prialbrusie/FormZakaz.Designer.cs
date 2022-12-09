@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listViewZakaz = new System.Windows.Forms.ListView();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.textBoxNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,27 +49,19 @@
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.buttonPrint = new System.Windows.Forms.Button();
+            this.dataGridViewZakaz = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHourStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutesStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutesFinish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHourFinish)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewZakaz)).BeginInit();
             this.SuspendLayout();
-            // 
-            // listViewZakaz
-            // 
-            this.listViewZakaz.HideSelection = false;
-            this.listViewZakaz.Location = new System.Drawing.Point(15, 6);
-            this.listViewZakaz.Margin = new System.Windows.Forms.Padding(6);
-            this.listViewZakaz.Name = "listViewZakaz";
-            this.listViewZakaz.Size = new System.Drawing.Size(531, 431);
-            this.listViewZakaz.TabIndex = 0;
-            this.listViewZakaz.UseCompatibleStateImageBehavior = false;
             // 
             // buttonAdd
             // 
             this.buttonAdd.BackColor = System.Drawing.Color.Lime;
-            this.buttonAdd.Location = new System.Drawing.Point(15, 449);
+            this.buttonAdd.Location = new System.Drawing.Point(15, 612);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(6);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(138, 42);
@@ -255,19 +246,28 @@
             // 
             // buttonPrint
             // 
-            this.buttonPrint.Location = new System.Drawing.Point(560, 615);
+            this.buttonPrint.Location = new System.Drawing.Point(560, 612);
             this.buttonPrint.Name = "buttonPrint";
-            this.buttonPrint.Size = new System.Drawing.Size(214, 34);
+            this.buttonPrint.Size = new System.Drawing.Size(214, 42);
             this.buttonPrint.TabIndex = 22;
             this.buttonPrint.Text = "Печать";
             this.buttonPrint.UseVisualStyleBackColor = true;
             this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
+            // 
+            // dataGridViewZakaz
+            // 
+            this.dataGridViewZakaz.Location = new System.Drawing.Point(13, 6);
+            this.dataGridViewZakaz.Name = "dataGridViewZakaz";
+            this.dataGridViewZakaz.ReadOnly = true;
+            this.dataGridViewZakaz.Size = new System.Drawing.Size(541, 597);
+            this.dataGridViewZakaz.TabIndex = 23;
             // 
             // FormZakaz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 661);
+            this.Controls.Add(this.dataGridViewZakaz);
             this.Controls.Add(this.buttonPrint);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.numericUpDownMinutesFinish);
@@ -289,7 +289,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxNumber);
             this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.listViewZakaz);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "FormZakaz";
@@ -299,14 +298,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinutesFinish)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownHourFinish)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewZakaz)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView listViewZakaz;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.TextBox textBoxNumber;
         private System.Windows.Forms.Label label1;
@@ -328,5 +326,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button buttonPrint;
+        private System.Windows.Forms.DataGridView dataGridViewZakaz;
     }
 }

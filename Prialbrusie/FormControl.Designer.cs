@@ -151,6 +151,7 @@
             this.buttonZakaz.Text = "Заказ";
             this.buttonZakaz.UseVisualStyleBackColor = false;
             this.buttonZakaz.Visible = false;
+            this.buttonZakaz.Click += new System.EventHandler(this.buttonZakaz_Click);
             // 
             // FormControl
             // 

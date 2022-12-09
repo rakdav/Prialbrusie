@@ -45,6 +45,12 @@ namespace Prialbrusie
             formHistory.ShowDialog();
         }
 
+        private void buttonZakaz_Click(object sender, EventArgs e)
+        {
+            FormZakaz form=new FormZakaz();
+            form.ShowDialog();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             seconds++;
