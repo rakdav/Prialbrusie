@@ -28,8 +28,17 @@ namespace Prialbrusie
                 {
                     comboBoxStatus.Items.Add(item);
                 }
-                var zakazes=db.Zakaz.ToList();
-                dataGridViewZakaz.DataSource=zakazes;
+                var zakazes = from zakaz in db.Zakaz
+                              select new
+                              {
+                                  Kode=zakaz.Kode,
+                                  DateStart=zakaz.DateStart,
+                                  TimeStart=zakaz.TimeStart,
+                                  Client=db.Client.Where(p=>p.id==zakaz.id_client).FirstOrDefault().Firstname,
+                                  Status=db.Status.Where(p=>p.id==zakaz.id_status).FirstOrDefault().name,
+                                  DateFinish=zakaz.DateFinish
+                              };
+                dataGridViewZakaz.DataSource=zakazes.ToList();
             }
         }
 
