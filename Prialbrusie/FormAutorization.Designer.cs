@@ -38,16 +38,20 @@
             this.buttonEnter = new System.Windows.Forms.Button();
             this.checkBoxShow = new System.Windows.Forms.CheckBox();
             this.timerStop = new System.Windows.Forms.Timer(this.components);
+            this.pictureBoxCapture = new System.Windows.Forms.PictureBox();
+            this.textBoxCapcha = new System.Windows.Forms.TextBox();
+            this.buttonGen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCapture)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 26);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(178, 216);
+            this.pictureBox1.Size = new System.Drawing.Size(214, 308);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -55,7 +59,7 @@
             // labelLogin
             // 
             this.labelLogin.AutoSize = true;
-            this.labelLogin.Location = new System.Drawing.Point(244, 26);
+            this.labelLogin.Location = new System.Drawing.Point(223, 26);
             this.labelLogin.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labelLogin.Name = "labelLogin";
             this.labelLogin.Size = new System.Drawing.Size(145, 24);
@@ -64,7 +68,7 @@
             // 
             // textBoxLogin
             // 
-            this.textBoxLogin.Location = new System.Drawing.Point(248, 65);
+            this.textBoxLogin.Location = new System.Drawing.Point(227, 65);
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.Size = new System.Drawing.Size(220, 29);
             this.textBoxLogin.TabIndex = 2;
@@ -73,7 +77,7 @@
             // labelPassword
             // 
             this.labelPassword.AutoSize = true;
-            this.labelPassword.Location = new System.Drawing.Point(248, 97);
+            this.labelPassword.Location = new System.Drawing.Point(227, 97);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(157, 24);
             this.labelPassword.TabIndex = 3;
@@ -81,7 +85,7 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(248, 124);
+            this.textBoxPassword.Location = new System.Drawing.Point(227, 124);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(220, 29);
             this.textBoxPassword.TabIndex = 4;
@@ -91,7 +95,7 @@
             // buttonEnter
             // 
             this.buttonEnter.BackColor = System.Drawing.Color.Lime;
-            this.buttonEnter.Location = new System.Drawing.Point(302, 194);
+            this.buttonEnter.Location = new System.Drawing.Point(281, 194);
             this.buttonEnter.Name = "buttonEnter";
             this.buttonEnter.Size = new System.Drawing.Size(103, 48);
             this.buttonEnter.TabIndex = 5;
@@ -102,7 +106,7 @@
             // checkBoxShow
             // 
             this.checkBoxShow.AutoSize = true;
-            this.checkBoxShow.Location = new System.Drawing.Point(248, 160);
+            this.checkBoxShow.Location = new System.Drawing.Point(227, 160);
             this.checkBoxShow.Name = "checkBoxShow";
             this.checkBoxShow.Size = new System.Drawing.Size(182, 28);
             this.checkBoxShow.TabIndex = 6;
@@ -115,11 +119,40 @@
             this.timerStop.Interval = 1000;
             this.timerStop.Tick += new System.EventHandler(this.timerStop_Tick);
             // 
+            // pictureBoxCapture
+            // 
+            this.pictureBoxCapture.Location = new System.Drawing.Point(227, 248);
+            this.pictureBoxCapture.Name = "pictureBoxCapture";
+            this.pictureBoxCapture.Size = new System.Drawing.Size(166, 50);
+            this.pictureBoxCapture.TabIndex = 7;
+            this.pictureBoxCapture.TabStop = false;
+            // 
+            // textBoxCapcha
+            // 
+            this.textBoxCapcha.Location = new System.Drawing.Point(227, 305);
+            this.textBoxCapcha.Name = "textBoxCapcha";
+            this.textBoxCapcha.Size = new System.Drawing.Size(220, 29);
+            this.textBoxCapcha.TabIndex = 8;
+            // 
+            // buttonGen
+            // 
+            this.buttonGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonGen.Location = new System.Drawing.Point(400, 248);
+            this.buttonGen.Name = "buttonGen";
+            this.buttonGen.Size = new System.Drawing.Size(47, 51);
+            this.buttonGen.TabIndex = 9;
+            this.buttonGen.Text = "Gen";
+            this.buttonGen.UseVisualStyleBackColor = true;
+            this.buttonGen.Click += new System.EventHandler(this.buttonGen_Click);
+            // 
             // FormAutorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 265);
+            this.ClientSize = new System.Drawing.Size(462, 353);
+            this.Controls.Add(this.buttonGen);
+            this.Controls.Add(this.textBoxCapcha);
+            this.Controls.Add(this.pictureBoxCapture);
             this.Controls.Add(this.checkBoxShow);
             this.Controls.Add(this.buttonEnter);
             this.Controls.Add(this.textBoxPassword);
@@ -133,6 +166,7 @@
             this.Name = "FormAutorization";
             this.Text = "Форма авторизации";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCapture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,6 +182,9 @@
         private System.Windows.Forms.Button buttonEnter;
         private System.Windows.Forms.CheckBox checkBoxShow;
         private System.Windows.Forms.Timer timerStop;
+        private System.Windows.Forms.PictureBox pictureBoxCapture;
+        private System.Windows.Forms.TextBox textBoxCapcha;
+        private System.Windows.Forms.Button buttonGen;
     }
 }
 
