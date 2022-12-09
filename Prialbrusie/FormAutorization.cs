@@ -48,6 +48,11 @@ namespace Prialbrusie
                         }
                         else
                         {
+                            user = await DB.User.Where(p => p.login.Equals(textBoxLogin.Text)).FirstOrDefaultAsync();
+                            user.LastEnter = DateTime.Now;
+                            user.type = 2;
+                            DB.Entry(user).State = EntityState.Modified;
+                            DB.SaveChangesAsync();
                             MessageBox.Show("Пользователя или пароля не существует");
                         };
                         break;
@@ -86,14 +91,21 @@ namespace Prialbrusie
         {
             count = 0;
             FormControl formControl = new FormControl(user);
+            user.LastEnter = DateTime.Now;
+            user.type = 1;
+            DB.Entry(user).State = EntityState.Modified;
+            DB.SaveChangesAsync();
             this.Hide();
             formControl.ShowDialog();
-            user.LastEnter = DateTime.Now;
-            DB.Entry(user).State = EntityState.Modified;
-            DB.SaveChanges();
             if (formControl.DialogResult == DialogResult.OK)
             {
                 this.Show();
+                pictureBoxCapture.Visible = false;
+                textBoxCapcha.Visible = false;
+                buttonGen.Visible = false;
+                textBoxLogin.Text = "";
+                textBoxPassword.Text = "";
+                checkBoxShow.Checked = false;
                 if (formControl.getStop())
                 {
                     buttonEnter.Enabled = false;
